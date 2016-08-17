@@ -2,12 +2,27 @@ body{
   background-color: #232323;
 }
 h1{
-  color: white;
+  color: #33adff;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+h2{
+  color: #33adff;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
 }
 #stripe{
-  background: white;
-  height: 30px;
   text-align: center;
+  padding-top: 15px;
+}
+.game-buttons{
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  margin: 10px;
+  font-family: 'Questrial', sans-serif;
 }
 #container{
   max-width: 600px;
@@ -19,4 +34,9 @@ h1{
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+}
+#message{
+  text-align: center;
+  color: green;
+  font-size: 30px;
 }

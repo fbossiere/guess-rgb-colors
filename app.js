@@ -27,26 +27,51 @@ var setNewColors = function(squares, titleColor) {
     }
 };
 
+var gameStop = false;
+var currentScore = 2;
+var s, ss, newScore, gamesTotal, pickedColor;
 var squares = document.querySelectorAll(".square");
 var titleColor = document.querySelector("#title");
+var score = document.querySelector("#score");
+var games = document.querySelector("#games");
 var message = document.querySelector("#message");
+var playAgainButton = document.querySelector("#playAgain");
 var resetButton = document.querySelector("#reset");
-var pickedColor;
-setNewColors(squares, titleColor);
 
+setNewColors(squares, titleColor);
+titleColor.textContent = pickedColor;
+playAgainButton.addEventListener("click", function() {
+    setNewColors(squares, titleColor);
+    titleColor.textContent = pickedColor;
+    message.textContent = "";
+    currentScore = 2;
+    gameStop = false;
+});
 resetButton.addEventListener("click", function() {
     setNewColors(squares, titleColor);
     titleColor.textContent = pickedColor;
     message.textContent = "";
+    currentScore = 2;
+    gameStop = false;
+    games.textContent = '0 game';
+    score.textContent = '0 point';
 });
 
 for (var i = 0; i < squares.length; i++) {
     squares[i].addEventListener('click', function() {
-        if (this.style.background == pickedColor) {
-            message.textContent = 'Correct Answer';
-            setAllPickedColor(squares, pickedColor);
-        } else {
-            this.style.background = '#232323';
+        if (!gameStop) {
+            if (this.style.background == pickedColor) {
+                message.textContent = 'Correct Answer';
+                newScore = parseInt(score.textContent) + currentScore;
+                gamesTotal = parseInt(games.textContent) + 1;
+                score.textContent = newScore.toString() + ' point' + (newScore > 1? 's':'');
+                games.textContent = gamesTotal.toString() + ' game' + (gamesTotal > 1? 's':'');
+                setAllPickedColor(squares, pickedColor);
+                gameStop = true;
+            } else {
+                this.style.background = '#232323';
+                currentScore = currentScore - 1;
+            }
         }
     });
 }
