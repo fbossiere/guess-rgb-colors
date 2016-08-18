@@ -69,6 +69,7 @@ for (var i = 0; i < squares.length; i++) {
                 setAllPickedColor(squares, pickedColor);
                 gameStop = true;
             } else {
+                this.style.transition = 'background 0.3s';
                 this.style.background = '#232323';
                 currentScore = currentScore - 1;
             }

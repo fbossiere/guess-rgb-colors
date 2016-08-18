@@ -1,44 +1,49 @@
-body{
-  background-color: #232323;
+body {
+    background-color: #232323;
 }
-h1{
-  color: #33adff;
-  text-align: center;
-  font-family: 'Lobster', cursive;
-  font-size: 50px;
+.well {
+    border-radius: 25px;
 }
-h2{
-  color: #33adff;
-  text-align: center;
-  font-family: 'Lobster', cursive;
-  font-size: 40px;
+h1 {
+    color: #33adff;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
 }
-#stripe{
-  text-align: center;
-  padding-top: 15px;
+h2 {
+    color: #33adff;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
 }
-.game-buttons{
-  width: 200px;
-  height: 60px;
-  font-size: 25px;
-  margin: 10px;
-  font-family: 'Questrial', sans-serif;
+#stripe {
+    text-align: center;
+    padding-top: 15px;
 }
-#container{
-  max-width: 600px;
-  margin: 0 auto;
+.game-buttons {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    margin: 10px;
+    font-family: 'Questrial', sans-serif;
+    border-radius: 15px;
 }
-.square{
-  width: 30%;
-  background: purple;
-  padding-bottom: 30%;
-  float: left;
-  margin: 1.66%;
+#container {
+    max-width: 600px;
+    margin: 0 auto;
 }
-.correct-answer{
-  clear: left;
-  text-align: center;
-  color: green;
-  font-size: 50px;
-  font-family: 'Questrial', cursive;
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 25px;
+}
+.correct-answer {
+    clear: left;
+    text-align: center;
+    color: green;
+    font-size: 50px;
+    font-family: 'Questrial', cursive;
 }
